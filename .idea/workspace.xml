@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0962020f-f543-49bb-859f-7a7de911f84f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lK1L7mhMfh91bN3AbQNqdoseUL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0962020f-f543-49bb-859f-7a7de911f84f" name="Default Changelist" comment="" />
+      <created>1607330910023</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607330910023</updated>
+      <workItem from="1607330911100" duration="18493000" />
+      <workItem from="1607596040264" duration="59000" />
+      <workItem from="1607596101123" duration="18000" />
+      <workItem from="1607598260572" duration="679000" />
+      <workItem from="1607608300704" duration="1689000" />
+      <workItem from="1607672870092" duration="8203000" />
+      <workItem from="1607931514087" duration="252000" />
+      <workItem from="1607931901294" duration="626000" />
+      <workItem from="1607934082309" duration="85000" />
+      <workItem from="1608018929524" duration="2442000" />
+      <workItem from="1608206359787" duration="11000" />
+      <workItem from="1608214829449" duration="74000" />
+      <workItem from="1614347251977" duration="5100000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2549" y="298" key="EditFileWatcherDialog" timestamp="1607334380897">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2549" y="298" key="EditFileWatcherDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607334380897" />
+    <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1608214902431">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1608214902431" />
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607934165512" />
+    <state x="2381" y="165" key="SettingsEditor" timestamp="1607334386422">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2381" y="165" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607334386422" />
+  </component>
+</project>

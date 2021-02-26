@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<style>
+    body, .main{
+        background-color: #FFFFFF;
+    }
+    div.digit, .unchecked-container > img {
+        width: inherit;
+        height: inherit;
+    }
+    #main, #header {
+        background: #ffffff;
+    }
+</style>
+<div class="main-container">
+    <div class="header-container">
+        <img class="logo" src="./img/header-logo.png" alt="">
+    </div>
+<!--    <?php-->
+<!--            /*echo '<br>';-->
+<!--    echo '<br>';-->
+<!--    echo '<br>';-->
+<!--    echo '<pre>';-->
+<!--            print_r($_POST);-->
+<!--            echo '</pre>';-->
+<!--    echo $codGen.'<br>';-->
+<!--    echo $saveSmsCode.'<br>';-->
+<!--    echo $phone.'<br>';-->
+<!--    echo $senteoqr_id.'<br>';-->
+<!--    echo $name.'<br>';-->
+<!--    echo $codeTrue.'<br>';-->
+<!--    echo $count.'<br>';*/-->
+<!--    ?>-->
+    <div class="title-wrapper">
+        <p class="thank-title">Спас<span class="for-line">и</span>бо,</p>
+        <p class="thank-message">что согласились поделиться своим впечатлением о визите в отделение!</p>
+        <!--            , <span id="user-name">Иван</span>-->
+    </div>
+    <form id="main-form" action="answer_step_one.html" method="post">
+        <input id="form-token" type="hidden" name="<?=Yii::$app->request->csrfParam?>" value="<?=Yii::$app->request->csrfToken?>"/>
+        <input id="text" type="hidden" name="otp-code-id" value="<?=$saveSmsCode?>"/>
+        <input id="text" type="hidden" name="otp-code-phone" value="<?=$phone?>"/>
+        <div class="pass-wrapper">
+            <input type="tel" id="pass" class="only-numbers" name="otp-code" auto-complete="one-time-code" placeholder="Введите Ваш одноразовый пароль">
+            <p class="data-error">Поле обязательно к заполнению и должно содержать не менее 5 символов</p>
+        </div>
+        <div class="next-btn-wrapper">
+            <button class="submit-btn" type="submit">Далее</button>
+        </div>
+    </form>
+</div>
+<script>
+    // var storageNameValue = localStorage.getItem('name');
+    var form = document.getElementById('main-form');
+    // $('#user-name').text(storageNameValue);
+    var onlyNumbers = document.querySelectorAll('.only-numbers');
+
+    for (var i = 0; i < onlyNumbers.length; i++) {
+        onlyNumbers[i].onkeypress = function (e) {
+            if (e.keyCode < 48 || e.keyCode > 57) {
+                return false;
+            }
+        };
+    }
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var userPass = $('#pass').val();
+        var erroreArrayElemnts = [];
+
+        if (userPass.length < 5) {
+            $('#pass').parents('.pass-wrapper').find('.data-error').show();
+            erroreArrayElemnts.push(userPass);
+        }
+        $('#pass').on('focus', function () {
+            $(this).parents('.pass-wrapper').find('.data-error').hide();
+        });
+
+        if (erroreArrayElemnts.length == 0) {
+            form.submit();
+        }
+    });
+</script>
+</body>
+</html>

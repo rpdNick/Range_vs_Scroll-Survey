@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    body, .main{
+        background-color: #FFFFFF;
+    }
+    div.digit, .unchecked-container > img {
+        width: inherit;
+        height: inherit;
+    }
+    #main, #header {
+        background: #ffffff;
+    }
+</style>
+<div class="page-container" style="overflow-y: auto;">
+    <div class="header-container">
+        <img class="logo" src="./img/header-logo.png" alt="">
+    </div>
+    <h5 class="reason-title">Спасибо за обращение в офис &laquo;<?=$otdelQR?>&raquo;</h5>
+    <h2 class="main-title">
+        Каждый день мы стараемся для Вас сделать наши услуги лучше и комфортнее.
+    </h2>
+    <p class="subtitle">Для того, чтобы оценить взаимодействие с сотрудником <span class="employer-name" style="font-weight: bold;"><?=$nameQR;?></span>, укажите, пожалуйста, свое имя и контактный телефон в полях ниже:</p>
+    <p class="subtitle-description">мы отправим одноразовый пароль на указанный номер телефона, используйте его для подтверждения участия в опросе</p>
+    <div class="contacts-wrapper">
+        <form action="code.html" id="main-form" method="post">
+            <input id="form-token" type="hidden" name="<?=Yii::$app->request->csrfParam?>" value="<?=Yii::$app->request->csrfToken?>"/>
+            <div class="contact-field-box">
+                <input class="contact-field" data-reqired id="name" placeholder="Имя" name="name">
+                <p class="data-error"></p>
+            </div>
+            <div class="contact-field-box phone-box">
+                <input class="contact-field only-numbers" data-reqired type="tel" id="phone" name="phone" placeholder="Телефон" maxlength="12">
+                <p class="data-error"></p>
+            </div>
+            <div class="agreement">
+                <label for="q-3-1" class="btn btn-1">
+                    <input type="checkbox" id="q-3-1" name="q-3-1" value="соглашение"
+                           style="display: none;">
+                    <p class="radio-text cont-radio-text">Я ознакомлен и согласен с
+                        <a class="rules-link" target="_blank" href="./rules.html" style="font-weight: bold;">условиями</a> обработки моих
+                        персональных данных</p>
+                    <span class="checkmark contacts-checkmark"></span>
+                </label>
+                <p class="agreement-error">Вам нужно согласиться с условиями </p>
+            </div>
+            <button class="submit-btn" type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+<script src="./js/jquery.mask.min.js"></script>
+<script>
+    /* Set chosen  name*/
+
+    var chosenName = localStorage.getItem('name');
+    $('.employer-name').text(chosenName);
+
+    var form = document.getElementById('main-form');
+    var onlyNumbers = document.querySelectorAll('.only-numbers');
+
+    for (var i = 0; i < onlyNumbers.length; i++) {
+        onlyNumbers[i].onkeypress = function (e) {
+            if (e.keyCode < 48 || e.keyCode > 57) {
+                return false;
+            }
+        };
+    }
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var el = document.querySelectorAll('[data-reqired]');
+        var agreement = document.getElementById('q-3-1');
+        var erroreArrayElemnts = [];
+
+        for (var i = 0; i < el.length; i++) {
+            console.log(el[i].value);
+
+            if (el[i].value === '') {
+                $(el[i]).parents('.contact-field-box').find('.data-error').show();
+                $(el[i]).parents('.contact-field-box').find('.data-error').text('Поле обязательно к заполнению');
+                erroreArrayElemnts.push(el[i]);
+            }
+            if($('#phone').val().length < 13 && $('#phone').val() !== ''){
+                $('#phone').parents('.contact-field-box').find('.data-error').show();
+                $('#phone').parents('.contact-field-box').find('.data-error').text('Пожалуйста, проверьте корректность заполнения поля "Телефон"');
+                erroreArrayElemnts.push(el[i]);
+            }
+            $(el[i]).on('focus', function () {
+                console.log('focus');
+                $(this).parents('.contact-field-box').find('.data-error').hide();
+            });
+        }
+        if (agreement.checked == false) {
+            erroreArrayElemnts.push(agreement);
+            $('.agreement-error').show();
+        }
+        $(agreement).on('change', function () {
+            $('.agreement-error').hide();
+        });
+
+        if (erroreArrayElemnts.length == 0) {
+            form.submit();
+            // var nameVal = $('#name').val();
+            // localStorage.setItem('name', nameVal);
+        }
+    });
+    $('#phone').mask('+7 999 999 99 99');
+    //$('#phone').mask('+999999999999');
+    let prevCode = null;
+    $('#phone').on('input', function (e) {
+        //console.log($('#phone').val().length);
+        // console.log(e);
+        //alert(e.originalEvent.inputType);
+        // console.log(prevCode);
+        // alert(e.originalEvent.data);
+        if((e.originalEvent.data == 8 && prevCode != 8 && $('#phone').val().length <= 4) || (e.originalEvent.data == '+' && prevCode !== '+' && $('#phone').val().length <= 4)){
+            // console.log(prevCode);
+            // console.log('+++')
+            $('#phone').mask('+7 999 999 99 99');
+            $('#phone').val('+7');
+            prevCode = e.originalEvent.data;
+            return false;
+        }
+        if((e.originalEvent.inputType == 'deleteContentBackward') && ($('#phone').val().length == 0)){
+            console.log(prevCode);
+            console.log('----')
+            $('#phone').mask('+7 999 999 99 99');
+            // $('#phone').val('+7');
+            prevCode = e.originalEvent.data;
+            // return false;
+        }
+    })
+</script>
+</body>
+</html>

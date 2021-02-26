@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<style>
+    body, .main{
+        background-color: #FFFFFF;
+    }
+    div.digit, .unchecked-container > img {
+        width: inherit;
+        height: inherit;
+    }
+    #main, #header {
+        background: #ffffff;
+    }
+</style>
+<div class="main-container">
+    <div class="header-container">
+        <img class="logo" src="./img/header-logo.png" alt="">
+    </div>
+    <p class="main-title">
+        <!-- <span class="main-title__number">1.</span> -->
+       Насколько в целом Вы удовлетворены работой сотрудни<span style="white-space: nowrap"><span class="for_line">ка</span> отделения?</span>
+    </p>
+    <form id="main-form" action="answer_end.html" method="post">
+        <div class="employer-wrapper">
+            <div class="photo-box">
+                <img src="./img/employers/2.JPG" alt="photo">
+            </div>
+            <div class="employer-data">
+                <p class="employer-name">Анастасия Куц</p>
+                <p class="employer-position">Главный персональный менеджер</p>
+            </div>
+        </div>
+        <div class="range-wrapper">
+            <p class="range-value">0</p>
+            <div class="smile-img-box face0">
+
+            </div>
+            <div class="margin-block"></div>
+            <div class="slider">
+                <span class="min-value" style="display: none;">0</span>
+                <div class="range-wrapper">
+                    <input type="range" name="step_o_ball" min="0" max="10" value="0" id="rangeInput" class="range"/>
+                    <span class="current-value">0</span>
+                    <span class="prev-value">1</span>
+                    <span class="next-value">2</span>
+                </div>
+                <span class="max-value" style="display: none;">10</span>
+            </div>
+            <p class="help-text">При ответе используйте бегунок, который будет отображать Ваши эмоции после визита в отделение банка.</p>
+        </div>
+        <div class="checked-point-slide-box point0-6">
+            <p class="slides-title">Что Вас разочаровало?</p>
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/scroll-icons/1.png" alt="point-icon">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/scroll-icons/2.png" alt="point-icon">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/scroll-icons/3.png" alt="point-icon">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/scroll-icons/4.png" alt="point-icon">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/scroll-icons/5.png" alt="point-icon">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="comment-wrapper">
+            <textarea class="comment" name="step_o_desc" placeholder="Оставьте комментарий"></textarea>
+            <p class="comment-error">Поле обязательно к заполнению</p>
+        </div>
+        <div class="btn-wrapper">
+            <button class="submit-btn" type="submit">Отправить</button>
+        </div>
+    </form>
+</div>
+<style>
+    .for_line:after{
+        content: '';
+        width: 215px !important;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .swiper-slide img{
+        width: 100px;
+    }
+    @media screen and (max-width: 368px){
+        .for_line:after{
+            content: '';
+            width: 124px !important;
+        }
+    }
+</style>
+<script src="./js/customRangeInp.js"></script>
+<script>
+    var form = document.getElementById('main-form');
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var el = document.querySelectorAll('[data-reqired]');
+        var erroreArrayElemnts = [];
+
+        for (var i = 0; i < el.length; i++) {
+            console.log(el[i].value);
+
+            if (el[i].value === '') {
+                $(el[i]).parents('.comment-wrapper').find('.comment-error').show();
+                erroreArrayElemnts.push(el[i]);
+            }
+
+            $(el[i]).on('focus', function () {
+                console.log('focus');
+                $(this).parents('.comment-wrapper').find('.comment-error').hide();
+            });
+        }
+
+        if (erroreArrayElemnts.length == 0) {
+            form.submit();
+        }
+    });
+</script>
+<script type = "text/javascript" >
+    history.pushState(null, null, location.href);
+    history.back(); history.forward();
+    window.onpopstate = function () { history.go(1); };
+</script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        speed: 700,
+        slidesPerView: 2.8,
+        spaceBetween: 30,
+        //   pagination: {
+        //     el: '.swiper-pagination',
+        //     clickable: true,
+        //   },
+    });
+</script>
+</body>
+</html>

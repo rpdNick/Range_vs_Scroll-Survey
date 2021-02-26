@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    body, .main{
+        background-color: #FFFFFF;
+    }
+    div.digit, .unchecked-container > img {
+        width: inherit;
+        height: inherit;
+    }
+    #main, #header {
+        background: #ffffff;
+    }
+</style>
+<div class="page-container" style="background-image: url(./img/end-bg2.png); background-color: #eeefea; background-position: bottom 0px right 0px;">
+    <div class="header-container" >
+        <img class="logo" src="./img/header-logo.png" alt="">
+    </div>
+    <p class="thanks-mess">
+        Благодарим Вас за пройденный <span style="white-space: nowrap;">опр<span class="for-line">о</span>с!</span>
+    </p>
+</div>
+
+</body>
+<script type = "text/javascript" >
+    history.pushState(null, null, location.href);
+    history.back(); history.forward();
+    window.onpopstate = function () { history.go(1); };
+</script>
+<style>
+    @media screen and (min-width: 411px) {
+        body .page-container .thanks-mess{
+            max-width: 340px;
+            padding-top: 50px;
+            margin:  0 auto;
+        }
+        body .page-container{
+            background-position: bottom -80px right 0px;
+        }
+    }
+    @media screen and (max-width: 520px){
+        body .page-container .thanks-mess{
+            max-width: 340px;
+            padding-top: 50px;
+            margin:  0 auto;
+        }
+    }
+</style>
+</body>
+</html>
