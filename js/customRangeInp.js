@@ -228,6 +228,7 @@ $.fn.WBslider = function() {
             }
         });
         $_input.on('change', function() {
+            $('.first-question-inp').prop('checked', false);
             let sliderItems = document.querySelectorAll('.employer-slider-box .employer-label');
             $('.hidden-content').show();
             // console.log('main-range changed');
@@ -448,7 +449,7 @@ $.fn.Officeslider = function() {
             }
         });
         $_input.on('change', function() {
-            let officeSituation = 0;
+            $('.second-question-inp').prop('checked', false);
             let sliderItems = document.querySelectorAll('.office-slider-box .office-label');
             var swiper = new Swiper('.swiper-container', {
                 speed: 700,

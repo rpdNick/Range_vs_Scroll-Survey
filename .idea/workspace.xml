@@ -5,9 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/customRangeInp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/customRangeInp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +68,8 @@
       <workItem from="1614599989121" duration="1778000" />
       <workItem from="1614601817737" duration="1804000" />
       <workItem from="1614603676485" duration="1776000" />
-      <workItem from="1614605507791" duration="1391000" />
+      <workItem from="1614605507791" duration="1777000" />
+      <workItem from="1614607622158" duration="1092000" />
     </task>
     <servers />
   </component>
