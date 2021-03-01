@@ -1,3 +1,62 @@
+employerStateObj = {
+    situation1: [{
+        url: './img/scroll-icons/1.png',
+        text: 'Отсутствие желания помочь'
+    }, {
+        url: './img/scroll-icons/2.png',
+        text: 'Вопрос не решен'
+    }, {
+            url: './img/scroll-icons/3.png',
+            text: 'Медленное обслуживание'
+        }, {
+            url: './img/scroll-icons/4.png',
+            text: 'Плохое знание продукта/ процесса'
+        }, {
+            url: './img/scroll-icons/5.png',
+            text: 'Невежливость сотрудника'
+        }],
+    situation2: [{
+        url: './img/scroll-icons/6.png',
+        text: 'Желание помочь'
+    }, {
+        url: './img/scroll-icons/7.png',
+        text: 'Решили вопрос'
+    }, {
+            url: './img/scroll-icons/8.png',
+            text: 'Быстрое обслуживание'
+        }, {
+            url: './img/scroll-icons/9.png',
+            text: 'Отличное Знание продукта/ процесса'
+        }, {
+            url: './img/scroll-icons/10.png',
+            text: 'Вежливость сотрудника'
+        }],
+}
+officeStateObj = {
+    situation1: [{
+        text: 'Неудобный График работы'
+    }, {
+        text: 'Неухожанный внешний вид офиса'
+    }, {
+        text: 'Устаревший, неухожанный интерьер'
+    }, {
+        text: 'Очередь в отделении'
+    }, {
+        text: 'Некомфортное прибываение (не удобная мебель, не комфортная температура, посторонние запахи, не убрано и т.п)'
+    }],
+    situation2: [{
+        text: 'Удобный график работы'
+    }, {
+        text: 'Ухожанный внешний вид офиса'
+    }, {
+        text: 'Современный и ухожанный интерьер'
+    }, {
+        text: 'Нет очередей'
+    }, {
+        text: 'Комфортное прибываение (комфортная зона ожидаия,  мебель, температура и свежесть воздуха, в помещении чисто)'
+    }],
+}
+
 $.fn.WBslider = function() {
     return this.each(function() {
         var $_this = $(this),
@@ -169,10 +228,9 @@ $.fn.WBslider = function() {
             }
         });
         $_input.on('change', function() {
-            // $('.comment-wrapper').fadeIn();
-            // $('.btn-wrapper').css('display','flex');
+            let sliderItems = document.querySelectorAll('.employer-slider-box .employer-label');
             $('.hidden-content').show();
-            console.log('main-range changed');
+            // console.log('main-range changed');
             var swiper = new Swiper('.swiper-container', {
                 speed: 700,
                 slidesPerView: 2.8,
@@ -184,17 +242,34 @@ $.fn.WBslider = function() {
             });
             currValue = +this.value;
              if (currValue < 10){
-                 console.log('<10')
+                 let employerSituation = employerStateObj.situation1;
+                 for (let i = 0; i < sliderItems.length; i++){
+                     // console.log($(sliderItems)[i]);
+                    $(sliderItems[i]).find(".check-icon").css('background-image', `url("${employerSituation[i].url}")`);
+                    $(sliderItems[i]).find(".employer-label-txt").text(employerSituation[i].text);
+                 }
                 $('.employer-slider-box .slides-title').text('Что Вас разочаровало?');
                 $('.point10').hide();
             }
             if (currValue >= 7 && currValue <= 9){
-                console.log('7-9')
+                // console.log('7-9');
+                let employerSituation = employerStateObj.situation1;
+                for (let i = 0; i < sliderItems.length; i++){
+                    // console.log($(sliderItems)[i]);
+                    $(sliderItems[i]).find(".check-icon").css('background-image', `url("${employerSituation[i].url}")`);
+                    $(sliderItems[i]).find(".employer-label-txt").text(employerSituation[i].text);
+                }
                 $('.employer-slider-box .slides-title').text('Что испортило впечатление?');
             }
              if (currValue == 10){
                  console.log('10')
                  $('.employer-slider-box .slides-title').text('Что понравилось больще всего?');
+                 let employerSituation = employerStateObj.situation2;
+                 for (let i = 0; i < sliderItems.length; i++){
+                     // console.log($(sliderItems[i]).find(".check-icon"));
+                     $(sliderItems[i]).find(".check-icon").css('background-image', `url("${employerSituation[i].url}")`);
+                     $(sliderItems[i]).find(".employer-label-txt").text(employerSituation[i].text);
+                 }
             }
         });
     });
@@ -208,8 +283,8 @@ $.fn.Officeslider = function() {
             $_min_value = $('.min-val', $_this).text(),
             $_max_value = $('.max-val', $_this).text(),
             thumbwidth = 40; // set this to the pixel width of the thumb
-        console.log($_this);
-        console.log($_input);
+        // console.log($_this);
+        // console.log($_input);
 
         // set range max to current year
         $_input.attr('max', $_max_value);
@@ -373,6 +448,8 @@ $.fn.Officeslider = function() {
             }
         });
         $_input.on('change', function() {
+            let officeSituation = 0;
+            let sliderItems = document.querySelectorAll('.office-slider-box .office-label');
             var swiper = new Swiper('.swiper-container', {
                 speed: 700,
                 slidesPerView: 2.8,
@@ -380,13 +457,28 @@ $.fn.Officeslider = function() {
             });
             currValue = +this.value;
             if (currValue < 10){
+                let officeSituation = officeStateObj.situation1;
+                for (let i = 0; i < sliderItems.length; i++){
+                    $(sliderItems[i]).find(".office-label-txt").text(officeSituation[i].text);
+                }
                 $('.office-slider-box .slides-title').text('Что Вас разочаровало?');
                 $('.point10').hide();
             }
             if (currValue >= 7 && currValue <= 9){
+                let officeSituation = officeStateObj.situation1;
+                for (let i = 0; i < sliderItems.length; i++){
+                    $(sliderItems[i]).find(".office-label-txt").text(officeSituation[i].text);
+                }
                 $('.office-slider-box .slides-title').text('Что испортило впечатление?');
             }
             if (currValue == 10){
+                let officeSituation = officeStateObj.situation2;
+                for (let i = 0; i < sliderItems.length; i++){
+                    // console.log('+++++++++++++++++++++')
+                    // console.log($(sliderItems)[i]);
+                    // console.log('+++++++++++++++++++++')
+                    $(sliderItems[i]).find(".office-label-txt").text(officeSituation[i].text);
+                }
                 $('.office-slider-box .slides-title').text('Что понравилось больще всего?');
             }
         });

@@ -787,6 +787,9 @@ body {
           background-image: url("../img/scroll-icons/4.png"); }
         body .main-container .slide-box .swiper-container .swiper-slide .employer-label .icon-5 {
           background-image: url("../img/scroll-icons/5.png"); }
+        body .main-container .slide-box .swiper-container .swiper-slide .employer-label .employer-label-txt {
+          font-size: 11px;
+          text-align: center; }
       body .main-container .slide-box .swiper-container .swiper-slide .office-label {
         cursor: pointer; }
         body .main-container .slide-box .swiper-container .swiper-slide .office-label .check-icon {
@@ -805,6 +808,9 @@ body {
           background-image: url("../img/office-scroll-icons/4.png"); }
         body .main-container .slide-box .swiper-container .swiper-slide .office-label .icon-5 {
           background-image: url("../img/office-scroll-icons/5.png"); }
+        body .main-container .slide-box .swiper-container .swiper-slide .office-label .office-label-txt {
+          font-size: 11px;
+          text-align: center; }
     body .main-container .second-question-wrapper {
       margin-top: 20px; }
       body .main-container .second-question-wrapper .second-question-txt {
