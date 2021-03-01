@@ -46,7 +46,7 @@
 
             </div>
             <div class="margin-block"></div>
-            <div class="slider">
+            <div class="custom-range">
                 <span class="min-value" style="display: none;">0</span>
                 <div class="range-wrapper">
                     <input type="range" name="step_o_ball" min="0" max="10" value="0" id="rangeInput" class="range"/>
@@ -58,43 +58,128 @@
             </div>
             <p class="help-text">При ответе используйте бегунок, который будет отображать Ваши эмоции после визита в отделение банка.</p>
         </div>
-        <div class="checked-point-slide-box point0-6">
+        <div class="hidden-content" style="display: none;">
+        <div class="slide-box employer-slider-box">
             <p class="slides-title">Что Вас разочаровало?</p>
             <!-- Swiper -->
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <label for="q-1-1">
-                            <input type="radio" name="q-1-1" id="q-1-1">
-                        <img src="./img/scroll-icons/1.png" alt="point-icon">
+                        <input type="radio" name="q-1-1" id="q-1-1">
+                        <label class="employer-label" for="q-1-1">
+                            <div class="check-icon icon-1"></div>
                         </label>
                     </div>
                     <div class="swiper-slide">
-                        <label for="q-1-2">
-                            <input type="radio" name="q-1-1" id="q-1-2">
-                        <img src="./img/scroll-icons/2.png" alt="point-icon">
+                        <input type="radio" name="q-1-1" id="q-1-2">
+                        <label class="employer-label" for="q-1-2">
+                            <div class="check-icon icon-2"></div>
                         </label>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./img/scroll-icons/3.png" alt="point-icon">
+                        <input type="radio" name="q-1-1" id="q-1-3">
+                        <label class="employer-label" for="q-1-3">
+                            <div class="check-icon icon-3"></div>
+                        </label>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./img/scroll-icons/4.png" alt="point-icon">
+                        <input type="radio" name="q-1-1" id="q-1-4">
+                        <label class="employer-label icon-4" for="q-1-4">
+                            <div class="check-icon icon-4"></div>
+                        </label>
                     </div>
                     <div class="swiper-slide">
-                        <img src="./img/scroll-icons/5.png" alt="point-icon">
+                        <input type="radio" name="q-1-1" id="q-1-5">
+                        <label class="employer-label icon-5" for="q-1-5">
+                            <div class="check-icon icon-5"></div>
+                        </label>
                     </div>
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
             </div>
         </div>
+            <div class="comment-wrapper">
+                <textarea class="comment" name="step_o_desc" placeholder="Оставьте комментарий"></textarea>
+                <p class="comment-error">Поле обязательно к заполнению</p>
+            </div>
+            <div class="second-question-wrapper">
+                <p class="second-question-txt">Оцените офис</p>
+                <div class="office-wrapper">
+                    <div class="photo-box">
+                        <img src="./img/office.jpg" alt="office-image">
+                    </div>
+                    <div class="office-data">
+                        <p class="office-box">Оцените офис <span class="office-name">&laquo;Красные ворота&raquo;</span></p>
+                    </div>
+                </div>
+                <div class="range-wrapper">
+                    <p class="range-value">0</p>
+                    <div class="smile-img face0">
+
+                    </div>
+                    <div class="margin-block"></div>
+                    <div class="office-custom-range">
+                        <span class="min-value" style="display: none;">0</span>
+                        <div class="range-wrapper">
+                            <input type="range" name="step_o_ball" min="0" max="10" value="0" id="office-rangeInput" class="range"/>
+                            <span class="current-val">0</span>
+                            <span class="prev-val">1</span>
+                            <span class="next-val">2</span>
+                        </div>
+                        <span class="max-val" style="display: none;">10</span>
+                    </div>
+                    <p class="help-text">При ответе используйте бегунок, который будет отображать Ваши эмоции после визита в отделение банка.</p>
+                </div>
+                <div class="slide-box office-slider-box">
+                    <p class="slides-title">Что Вас разочаровало?</p>
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <input type="radio" name="q-1-1" id="q-2-1">
+                                <label class="office-label" for="q-2-1">
+                                    <div class="check-icon icon-1"></div>
+                                </label>
+                            </div>
+                            <div class="swiper-slide">
+                                <input type="radio" name="q-1-1" id="q-2-2">
+                                <label class="office-label" for="q-2-2">
+                                    <div class="check-icon icon-2"></div>
+                                </label>
+                            </div>
+                            <div class="swiper-slide">
+                                <input type="radio" name="q-1-1" id="q-2-3">
+                                <label class="office-label" for="q-2-3">
+                                    <div class="check-icon icon-3"></div>
+                                </label>
+                            </div>
+                            <div class="swiper-slide">
+                                <input type="radio" name="q-1-1" id="q-2-4">
+                                <label class="office-label icon-4" for="q-2-4">
+                                    <div class="check-icon icon-4"></div>
+                                </label>
+                            </div>
+                            <div class="swiper-slide">
+                                <input type="radio" name="q-1-1" id="q-2-5">
+                                <label class="office-label icon-5" for="q-2-5">
+                                    <div class="check-icon icon-5"></div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
         <div class="comment-wrapper">
             <textarea class="comment" name="step_o_desc" placeholder="Оставьте комментарий"></textarea>
             <p class="comment-error">Поле обязательно к заполнению</p>
         </div>
+
         <div class="btn-wrapper">
             <button class="submit-btn" type="submit">Отправить</button>
+        </div>
         </div>
     </form>
 </div>
@@ -107,7 +192,7 @@
         text-align: center;
         font-size: 18px;
         background: #fff;
-
+        max-width: 100.357px;
         /* Center slide text vertically */
         display: -webkit-box;
         display: -ms-flexbox;
@@ -122,9 +207,7 @@
         -webkit-align-items: center;
         align-items: center;
     }
-    .swiper-slide img{
-        width: 100px;
-    }
+
     @media screen and (max-width: 368px){
         .for_line:after{
             content: '';
@@ -132,7 +215,18 @@
         }
     }
 </style>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+
+</script>
 <script src="./js/customRangeInp.js"></script>
+
+
+<!-- Initialize Swiper -->
+<script>
+
+</script>
 <script>
     var form = document.getElementById('main-form');
     form.addEventListener('submit', function (e) {
@@ -163,19 +257,6 @@
     history.pushState(null, null, location.href);
     history.back(); history.forward();
     window.onpopstate = function () { history.go(1); };
-</script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<!-- Initialize Swiper -->
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        speed: 700,
-        slidesPerView: 2.8,
-        spaceBetween: 30,
-        //   pagination: {
-        //     el: '.swiper-pagination',
-        //     clickable: true,
-        //   },
-    });
 </script>
 </body>
 </html>

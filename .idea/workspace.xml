@@ -4,6 +4,10 @@
     <list default="true" id="0962020f-f543-49bb-859f-7a7de911f84f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/customRangeInp.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/customRangeInp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +56,18 @@
       <workItem from="1614527086843" duration="165000" />
       <workItem from="1614527255372" duration="121000" />
       <workItem from="1614527393549" duration="261000" />
-      <workItem from="1614536616457" duration="121000" />
+      <workItem from="1614536616457" duration="303000" />
+      <workItem from="1614536944175" duration="18000" />
+      <workItem from="1614585247629" duration="390000" />
+      <workItem from="1614585678714" duration="294000" />
+      <workItem from="1614585993596" duration="1780000" />
+      <workItem from="1614587812311" duration="1774000" />
+      <workItem from="1614589622228" duration="977000" />
+      <workItem from="1614590804922" duration="1851000" />
+      <workItem from="1614592695349" duration="1776000" />
+      <workItem from="1614594510836" duration="1773000" />
+      <workItem from="1614596328276" duration="1696000" />
+      <workItem from="1614598150265" duration="1246000" />
     </task>
     <servers />
   </component>
@@ -64,15 +79,15 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2549" y="298" key="EditFileWatcherDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607334380897" />
-    <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1614527251377">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1608214902431" />
-    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607934165512" />
-    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614527251377" />
-    <state x="2381" y="165" key="SettingsEditor" timestamp="1607334386422">
+    <state x="2660" y="275" key="FileChooserDialogImpl" timestamp="1614590606457">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2381" y="165" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607334386422" />
+    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1608214902431" />
+    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1614590606457" />
+    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614527251377" />
+    <state x="2381" y="165" key="SettingsEditor" timestamp="1614585955904">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2381" y="165" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1614585955904" />
   </component>
 </project>
